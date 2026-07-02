@@ -15,3 +15,6 @@ venv/
 #     git lfs install
 #     git lfs track "artifacts/*.npy"
 #     git add .gitattributes
+
+precompute_log.txt
+submission_sample.csv
