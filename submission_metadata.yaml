@@ -1,69 +1,69 @@
-# Redrob Hackathon — Submission Metadata Template
+# Redrob Hackathon — Submission Metadata
 
 # Team identity
-team_name: "N Nishita"  
+team_name: "N Nishita"
 
 primary_contact:
   name: "N Nishita"
-  email: "nnishita2003@example.com"  
-  phone: "+91-9632090110"     
+  email: "nnishita2003@gmail.com"
+  phone: "<+91-9632090110>"
 
 team_members:
   - name: "N Nishita"
-    email: "nnishita2003@example.com" 
-    role: "ML Engineer"         
-  
+    email: "nnishita2003@gmail.com"
+
 # Code and reproducibility
-github_repo: "https://github.com/YOUR_USERNAME/YOUR_REPO"
+github_repo: "https://github.com/nishita-7/redrob-candidate-ranker"
 
+sandbox_link: "https://redrob-candidate-ranker-yvzsbnzclzjhdfxghdtr7f.streamlit.app/" 
 
-sandbox_link: "https://huggingface.co/spaces/YOUR_USERNAME/redrob-ranker"
-
-
+# Single command that produces the top-100 CSV (runs in <5 min on CPU, no network, using the committed artifacts).
 reproduce_command: "python -m src.rank --candidates data/candidates.jsonl --out submission.csv"
 
 # Compute environment
+compute_environment: "Windows 11, Python 3.10, CPU only (no GPU), 16GB RAM"
 compute:
-  platform: "MacBook Pro M2"                    # Or: "AWS EC2 c5.4xlarge", "Local Linux box", etc.
-  cpu_cores: 8                                  # Number of CPU cores used
-  ram_gb: 16                                    # Available RAM in GB
-  python_version: "3.11.4"                      # python --version
-  os: "macOS 14.2"                              # Or "Ubuntu 22.04 LTS", etc.
-  uses_gpu_for_inference: false                 # Must be false — see compute constraints
-  has_network_during_ranking: false             # Must be false — no API calls during ranking
-  pre_computation_required: true   # we precompute embeddings offline (src/precompute.py)               # true if you pre-compute embeddings or train models offline
-  pre_computation_time_minutes: 0               # Approximate, if applicable
+  os: "Windows 11"
+  python_version: "3.10"
+  cpu_cores: "10"
+  ram_gb: 16
+  uses_gpu_for_inference: false      # must be false
+  has_network_during_ranking: false  # must be false
+  pre_computation_required: true     # embeddings/BM25 built offline via src/precompute.py
+  pre_computation_time_minutes: "180"
 
-# AI tools declaration
+# AI tools declaration (transparency only — honest declaration is NOT penalized)
 ai_tools_used:
-  - "Claude"        # for architecture discussion, code review
-  - "GitHub Copilot"  
+  - "Claude"
+  - "ChatGPT"
 
 ai_usage_summary: |
-  Briefly describe how AI tools were used. Examples:
-  - "Used Claude for code review and architectural discussion. Used Copilot for autocomplete.
-     No candidate data was fed to any LLM."
-  - "Used ChatGPT to debug Python issues and Cursor for refactoring."
-  - "No AI tools used."
+  Used Claude for architecture discussion, code review, EDA interpretation, and
+  debugging. All engineering decisions (the work-text-vs-skills thesis, honeypot
+  rule validation, stuffer definition, hybrid RRF retrieval, scoring weights)
+  were reviewed and owned by the team. No candidate data was used to train or
+  fine-tune any model; the ranking step makes no external API calls. Used ChatGPT for minor code refactoring and error correction. 
 
-# Approach summary 
+# Methodology summary 
 methodology_summary: |
-  ≤200 word summary of your approach. Strongly recommended.
+  Two-phase ranker. Offline: embed each candidate's work text (titles +
+  descriptions, not the gameable skills array) with a local BGE model, build a
+  feature table, and index work text with BM25. Online (the timed step): fuse
+  dense cosine and BM25 rankings with Reciprocal Rank Fusion, then apply
+  structured JD-rubric scoring (must-have signals found in actual work,
+  experience band, geography), disqualifier penalties (keyword stuffer,
+  off-domain, services-only, job-hopper), and a sentinel-aware behavioral
+  multiplier (response rate, recency, notice period). Profile contradictions are
+  penalized, never deleted. Keyword-stuffers are caught by the gap between
+  claimed skills and actual work; honeypot rules were validated with an EDA
+  harness that rejects any rule firing equally on strong and weak candidates.
+  The ranking step runs CPU-only with no network in well under 5 minutes on
+  precomputed artifacts.
 
-  Example:
-  "Rule-based ranker with explicit reasoning capture. Five scoring components
-  (skills, title+career, experience years, location, education) combined with
-  a multiplicative behavioral-signal modifier. The title component is the
-  decisive signal against keyword-stuffer traps; an endorsement-and-duration
-  trust multiplier on skills catches lazy keyword stuffing. Runtime is ~10
-  seconds for 50K candidates on CPU."
-
-# ============================================================================
 # Declarations
-# ============================================================================
 declarations:
-  read_submission_spec: true        # I have read submission_spec.md in full
-  code_is_original_work: true       # My code is my team's original work (using AI as a tool is fine)
-  no_collusion: true                # I have not coordinated my submission with other teams
-  honeypot_check_done: false        # OPTIONAL — set true if you explicitly checked for honeypots in your ranking
-  reproduction_tested: true         # I have tested that my reproduce_command runs end-to-end
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  reproduction_tested: true
+  honeypot_check_done: true          
