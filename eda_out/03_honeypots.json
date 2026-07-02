@@ -1,0 +1,54 @@
+{
+  "n": 100000,
+  "proxy_quartiles": {
+    "q1": 0,
+    "q3": 2
+  },
+  "rules": {
+    "expert_zero_evidence": {
+      "total_flagged": 8,
+      "pct_of_pool": 0.01,
+      "fire_rate_low_quality": 0.0001,
+      "fire_rate_high_quality": 0.0001,
+      "low_over_high_ratio": 1.3,
+      "genuine_ai_candidates_wrongly_flagged": 0,
+      "verdict": "TOO FEW TO JUDGE STATISTICALLY (n<30) \u2014 inspect the flagged profiles by hand"
+    },
+    "duration_gt_span": {
+      "total_flagged": 19,
+      "pct_of_pool": 0.02,
+      "fire_rate_low_quality": 0.0003,
+      "fire_rate_high_quality": 0.0001,
+      "low_over_high_ratio": 4.15,
+      "genuine_ai_candidates_wrongly_flagged": 0,
+      "verdict": "TOO FEW TO JUDGE STATISTICALLY (n<30) \u2014 inspect the flagged profiles by hand"
+    },
+    "job_longer_than_career": {
+      "total_flagged": 19,
+      "pct_of_pool": 0.02,
+      "fire_rate_low_quality": 0.0003,
+      "fire_rate_high_quality": 0.0001,
+      "low_over_high_ratio": 4.15,
+      "genuine_ai_candidates_wrongly_flagged": 0,
+      "verdict": "TOO FEW TO JUDGE STATISTICALLY (n<30) \u2014 inspect the flagged profiles by hand"
+    },
+    "career_exceeds_yoe": {
+      "total_flagged": 14,
+      "pct_of_pool": 0.01,
+      "fire_rate_low_quality": 0.0002,
+      "fire_rate_high_quality": 0.0,
+      "low_over_high_ratio": 6.22,
+      "genuine_ai_candidates_wrongly_flagged": 0,
+      "verdict": "TOO FEW TO JUDGE STATISTICALLY (n<30) \u2014 inspect the flagged profiles by hand"
+    },
+    "degree_inversion__KNOWN_BAD": {
+      "total_flagged": 11294,
+      "pct_of_pool": 11.29,
+      "fire_rate_low_quality": 0.1117,
+      "fire_rate_high_quality": 0.1151,
+      "low_over_high_ratio": 0.97,
+      "genuine_ai_candidates_wrongly_flagged": 86,
+      "verdict": "REJECT \u2014 NOISE (fires equally on strong & weak)"
+    }
+  }
+}

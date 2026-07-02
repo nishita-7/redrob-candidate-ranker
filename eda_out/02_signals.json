@@ -1,0 +1,121 @@
+{
+  "n": 100000,
+  "sentinels_TREAT_AS_MISSING": {
+    "github_activity_score_missing_pct": 64.6,
+    "offer_acceptance_rate_missing_pct": 59.6
+  },
+  "github_activity_score_when_present": {
+    "p10": 6.0,
+    "p25": 14.3,
+    "median": 28.4,
+    "p75": 42.3,
+    "p90": 51.7
+  },
+  "offer_acceptance_rate_when_present": {
+    "p10": 0.23,
+    "p25": 0.32,
+    "median": 0.48,
+    "p75": 0.63,
+    "p90": 0.72
+  },
+  "days_inactive": {
+    "p10": 51,
+    "p25": 83,
+    "median": 136,
+    "p75": 193,
+    "p90": 237,
+    "over_180d_pct": 30.2
+  },
+  "continuous_percentiles": {
+    "recruiter_response_rate": {
+      "p10": 0.14,
+      "p25": 0.25,
+      "median": 0.44,
+      "p75": 0.62,
+      "p90": 0.73
+    },
+    "avg_response_time_hours": {
+      "p10": 31.6,
+      "p25": 68.3,
+      "median": 129.9,
+      "p75": 193.3,
+      "p90": 240.4
+    },
+    "profile_completeness_score": {
+      "p10": 32.8,
+      "p25": 42.2,
+      "median": 56.8,
+      "p75": 71.6,
+      "p90": 80.4
+    },
+    "connection_count": {
+      "p10": 77,
+      "p25": 174,
+      "median": 335,
+      "p75": 497,
+      "p90": 595
+    },
+    "endorsements_received": {
+      "p10": 5,
+      "p25": 14,
+      "median": 28,
+      "p75": 43,
+      "p90": 55
+    },
+    "profile_views_received_30d": {
+      "p10": 9,
+      "p25": 23,
+      "median": 45,
+      "p75": 68,
+      "p90": 86
+    },
+    "applications_submitted_30d": {
+      "p10": 1,
+      "p25": 2,
+      "median": 5,
+      "p75": 8,
+      "p90": 10
+    },
+    "search_appearance_30d": {
+      "p10": 20,
+      "p25": 52,
+      "median": 105,
+      "p75": 158,
+      "p90": 226
+    },
+    "saved_by_recruiters_30d": {
+      "p10": 1,
+      "p25": 3,
+      "median": 7,
+      "p75": 11,
+      "p90": 15
+    },
+    "interview_completion_rate": {
+      "p10": 0.38,
+      "p25": 0.48,
+      "median": 0.62,
+      "p75": 0.76,
+      "p90": 0.85
+    },
+    "notice_period_days": {
+      "p10": 30,
+      "p25": 60,
+      "median": 90,
+      "p75": 120,
+      "p90": 150
+    }
+  },
+  "bool_true_pct": {
+    "open_to_work_flag": 35.3,
+    "willing_to_relocate": 28.8,
+    "verified_email": 72.0,
+    "verified_phone": 61.8,
+    "linkedin_connected": 36.0
+  },
+  "preferred_work_mode": {
+    "onsite": 25000,
+    "flexible": 25000,
+    "hybrid": 25076,
+    "remote": 24924
+  }
+}

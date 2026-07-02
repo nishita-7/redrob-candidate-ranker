@@ -1,0 +1,165 @@
+{
+  "n": 100000,
+  "geography": {
+    "india_pct": 75.1,
+    "top_countries": [
+      [
+        "India",
+        75113
+      ],
+      [
+        "USA",
+        9978
+      ],
+      [
+        "Australia",
+        2579
+      ],
+      [
+        "Canada",
+        2506
+      ],
+      [
+        "UK",
+        2472
+      ],
+      [
+        "Germany",
+        2469
+      ],
+      [
+        "Singapore",
+        2453
+      ],
+      [
+        "UAE",
+        2430
+      ]
+    ]
+  },
+  "yoe": {
+    "p10": 2.2,
+    "median": 6.8,
+    "p90": 13.0,
+    "min": 1.0,
+    "max": 16.9
+  },
+  "industry_pct": [
+    [
+      "IT Services",
+      29.9
+    ],
+    [
+      "Software",
+      22.4
+    ],
+    [
+      "Manufacturing",
+      22.3
+    ],
+    [
+      "Conglomerate",
+      7.6
+    ],
+    [
+      "Paper Products",
+      7.5
+    ],
+    [
+      "Fintech",
+      2.8
+    ],
+    [
+      "Food Delivery",
+      2.5
+    ],
+    [
+      "E-commerce",
+      1.5
+    ],
+    [
+      "Consulting",
+      1.3
+    ],
+    [
+      "EdTech",
+      0.6
+    ],
+    [
+      "SaaS",
+      0.3
+    ],
+    [
+      "AI/ML",
+      0.3
+    ],
+    [
+      "AdTech",
+      0.2
+    ],
+    [
+      "Transportation",
+      0.2
+    ],
+    [
+      "Insurance Tech",
+      0.2
+    ],
+    [
+      "Gaming",
+      0.1
+    ],
+    [
+      "HealthTech",
+      0.1
+    ],
+    [
+      "HealthTech AI",
+      0.1
+    ],
+    [
+      "Conversational AI",
+      0.1
+    ],
+    [
+      "AI Services",
+      0.0
+    ],
+    [
+      "Voice AI",
+      0.0
+    ],
+    [
+      "Internet",
+      0.0
+    ],
+    [
+      "Media",
+      0.0
+    ],
+    [
+      "Consumer Electronics",
+      0.0
+    ]
+  ],
+  "company_size": {
+    "10001+": 40464,
+    "201-500": 15096,
+    "1001-5000": 18201,
+    "5001-10000": 3419,
+    "11-50": 7568,
+    "501-1000": 7525,
+    "51-200": 7727
+  },
+  "field_emptiness_pct": {
+    "education": 0.0,
+    "certifications": 75.0,
+    "languages": 0.0,
+    "skill_assessment_scores": 75.8
+  },
+  "profile_completeness": {
+    "p10": 32.8,
+    "median": 56.8,
+    "p90": 80.4
+  }
+}
