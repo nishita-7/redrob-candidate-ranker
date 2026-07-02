@@ -3,7 +3,7 @@
 Ranks the 100,000-candidate pool for the **Senior AI Engineer** JD and writes a
 validator-passing top-100 CSV.
 
-> **Live sandbox:** [<PASTE_YOUR_STREAMLIT_CLOUD_URL_HERE>](https://redrob-candidate-ranker-yvzsbnzclzjhdfxghdtr7f.streamlit.app/)
+> **Live sandbox:** [https://redrob-candidate-ranker-yvzsbnzclzjhdfxghdtr7f.streamlit.app/](https://redrob-candidate-ranker-yvzsbnzclzjhdfxghdtr7f.streamlit.app/)
 > Runs this exact pipeline on a ≤100-candidate sample, end-to-end, in the browser.
 
 **Core idea:** signal lives in what a candidate has *actually done* — their
