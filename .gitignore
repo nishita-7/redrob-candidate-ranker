@@ -1,0 +1,17 @@
+# dataset (too large for git; graders provide their own copy)
+data/candidates.jsonl
+data/*.jsonl
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.DS_Store
+
+# NOTE: artifacts/emb.npy + features.jsonl are COMMITTED on purpose, so the
+# single reproduce command (src/rank.py) works on a fresh clone without a
+# 20-min re-embed. emb.npy is ~150MB -> use Git LFS:
+#     git lfs install
+#     git lfs track "artifacts/*.npy"
+#     git add .gitattributes
